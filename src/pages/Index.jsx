@@ -1,5 +1,5 @@
 import { Box, Container, Flex, Text, VStack, IconButton, Menu, MenuButton, MenuList, MenuItem, Button } from "@chakra-ui/react";
-import { FaCog, FaSignOutAlt, FaUser, FaPlus, FaChartLine, FaDollarSign, FaChartPie } from "react-icons/fa";
+import { FaCog, FaSignOutAlt, FaUser, FaPlus, FaChartLine, FaDollarSign, FaChartPie, FaDownload } from "react-icons/fa";
 
 const Index = () => {
   return (
