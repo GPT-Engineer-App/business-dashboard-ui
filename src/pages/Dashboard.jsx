@@ -1,30 +1,11 @@
-import { Box, Container, Flex, Text, VStack, IconButton, Menu, MenuButton, MenuList, MenuItem, Button } from "@chakra-ui/react";
-import { FaCog, FaSignOutAlt, FaUser, FaPlus, FaChartLine, FaDollarSign, FaChartPie, FaDownload } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
+import { Box, Container, Flex, Text, VStack, Button } from "@chakra-ui/react";
+import { FaPlus, FaChartLine, FaDollarSign, FaChartPie } from "react-icons/fa";
 
-const Index = () => {
-  const navigate = useNavigate();
-
-  const handleLogout = () => {
-    localStorage.removeItem("authenticated");
-    navigate("/login");
-  };
+const Dashboard = () => {
   return (
     <Container maxW="container.xl" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center" bg="gray.900" color="white">
       <Flex width="100%" justifyContent="space-between" alignItems="center" p={4}>
         <Text fontSize="2xl" fontWeight="bold">Dashboard</Text>
-        <Menu>
-          <MenuButton as={IconButton} icon={<FaUser />} variant="outline" />
-          <MenuList>
-            <MenuItem icon={<FaUser />}>Personal account</MenuItem>
-            <MenuItem icon={<FaCog />}>Manage workspace</MenuItem>
-            <MenuItem icon={<FaChartLine />}>My GPTs</MenuItem>
-            <MenuItem icon={<FaCog />}>Customize ChatGPT</MenuItem>
-            <MenuItem icon={<FaCog />}>Settings</MenuItem>
-            <MenuItem icon={<FaDownload />}>Download the macOS app</MenuItem>
-            <MenuItem icon={<FaSignOutAlt />} onClick={handleLogout}>Log out</MenuItem>
-          </MenuList>
-        </Menu>
       </Flex>
       <VStack spacing={8} mt={8}>
         <Flex justifyContent="space-around" width="100%">
@@ -49,4 +30,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Dashboard;
